@@ -4,6 +4,7 @@ USE alx_book_store;
 -- Print the full description of the 'Books' table
 -- by querying the INFORMATION_SCHEMA.COLUMNS table.
 -- This approach avoids using DESCRIBE or EXPLAIN statements.
+
 SELECT
     COLUMN_NAME,
     COLUMN_TYPE,
