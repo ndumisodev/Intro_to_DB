@@ -5,16 +5,15 @@ USE alx_book_store;
 -- by querying the INFORMATION_SCHEMA.COLUMNS table.
 -- This approach avoids using DESCRIBE or EXPLAIN statements.
 
-SELECT
-    COLUMN_NAME,
-    COLUMN_TYPE,
-    IS_NULLABLE,
-    COLUMN_KEY,
-    COLUMN_DEFAULT,
+
+USE alx_book_store;
+
+SELECT 
+    COLUMN_NAME, 
+    COLUMN_TYPE, 
+    COLUMN_KEY, 
     EXTRA
-FROM
+FROM 
     INFORMATION_SCHEMA.COLUMNS
-WHERE
-    TABLE_SCHEMA = 'alx_book_store' AND TABLE_NAME = 'Books'
-ORDER BY
-    ORDINAL_POSITION;
+WHERE 
+    TABLE_NAME = 'Books' AND TABLE_SCHEMA = 'alx_book_store';
