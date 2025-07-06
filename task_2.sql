@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS Order_Details (
     orderdetailid INT PRIMARY KEY,
     order_id INT,
     book_id INT,
-    quantity INT NOT NULL, -- Changed DOUBLE to INT as quantity is typically integer
+    quantity DOUBLE NOT NULL, -- Changed INT back to DOUBLE as per test requirement
     FOREIGN KEY (order_id) REFERENCES Orders(order_id),
     FOREIGN KEY (book_id) REFERENCES Books(book_id)
 );
